@@ -3,6 +3,7 @@
 #include <string.h>
 
 #include "users.h"
+#include "controllers.h"
 
 
 void main(void) {
@@ -14,10 +15,14 @@ void main(void) {
     scanf("%s", user_name);
 
     printf("\n Enter user age: ");
-    int age;
-    scanf("%d", &age);
+    int *age = malloc(sizeof(int));
+    scanf("%d", age);
+    
+    
 
-    createUser(user_name, age, 0, users_Path);
-    createUser(user_name, age, 1, users_Path);
+    createUserTypeA(user_name, age, users_Path);
+    createUserTypeU(user_name, age, users_Path);
+
+    
     
 }
