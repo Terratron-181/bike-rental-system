@@ -16,9 +16,9 @@ typedef struct {
 } User;
 
 
-User *createUser(char *user_name, int *age, int *role);
-void formatUser(User *user_instance);
-void save_user(char *formatted_user, char *Path);
+int createUser(char *user_name, int age, int role, char *Path);
+int formatUser(User *user_instance, char *Path);
+int saveUser(char *formatted_user_string, char *Path);
 
 
 #endif
